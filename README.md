@@ -1,9 +1,9 @@
 <h2>Recipe-App</h2>
 <img src="app/assets/images/cook-book.png" alt="Icon" width="100px" height="100px" />
 <br>
-<br>
 
 # 📗 Table of Contents
+
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
@@ -24,11 +24,15 @@
 - [📝 License](#license)
 
 # 📖 Recipe-App <a name="about-project"></a>
+
 Recipe App is a robust and user-friendly recipe application built using Ruby on Rails, leveraging the power of Bootstrap, Devise, and Capybara gems. Seamlessly create, discover, and share recipes with it. It offers a delightful cooking experience with its intuitive interface and extensive features.
-**Recipe-App** 
+**Recipe-App**
+
 ## 🛠 Built With <a name="built-with"></a>
+
 PostgresSQL
 Ruby on rails
+
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
@@ -41,6 +45,7 @@ Ruby on rails
 <br>
 
 ### Key Features <a name="key-features"></a>
+
 <details>
   <ul>
     <li>Add Foods with its value and measure unit</li>
@@ -58,9 +63,11 @@ Ruby on rails
 - [Click Here](https://mysite-uoec.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
+
 <br>
 
 ### Prerequisites
+
 <details>
 <p>In order to run this project you need:</p>
   <ul>
@@ -71,20 +78,17 @@ Ruby on rails
 </details>
 <br>
 
-
 ### Setup
 
 Clone this repository to your desired folder:
 
     git clone https://github.com/anas599/Recipe-app.git
-  cd Recipe-App
-  
+
+cd Recipe-App
 
   <br>
-  
 
 ### Install
-
 
 <details>
 <p>Install this project with:</p>
@@ -95,8 +99,8 @@ Clone this repository to your desired folder:
 </details>
 <br>
 
-
 ### Usage
+
 <details>
 <p>To run the project, execute the following command:</p>
   <ul>
@@ -106,9 +110,8 @@ Clone this repository to your desired folder:
 </details>
 <br>
 
-
-
 ### Run tests
+
 <details>
 <p>To run tests, run the following command:</p>
   <ul>
@@ -117,8 +120,8 @@ Clone this repository to your desired folder:
 </details>
 <br>
 
-
 ### Deployment
+
 <details>
 <p>You can deploy this project using:</p>
   <ul>
@@ -141,11 +144,10 @@ Clone this repository to your desired folder:
 - Twitter: [@UthmanDeRoyale](https://twitter.com/UthmanDeRoyale)
 - LinkedIn: [Uthman Igein Bello-Imoukhuede](https://www.linkedin.com/in/uthmanbelloimoukhuede)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 🔭 Future Features <a name="future-features"></a>
+
 <details>
   <ul>
     <li>Add videos for new data</li>
@@ -155,16 +157,13 @@ Clone this repository to your desired folder:
 </details>
 <br>
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/anas599/Recipe-app.git/issues/).
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
