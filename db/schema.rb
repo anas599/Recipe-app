@@ -10,14 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_21_212058) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_22_162947) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "foods", force: :cascade do |t|
+    t.string "name"
+    t.string "measure_unit"
+    t.decimal "price"
+    t.integer "quantity"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_foods_on_user_id"
+  end
+
+  create_table "recipe_foods", force: :cascade do |t|
+    t.integer "quantity"
+    t.integer "recipe_id"
+    t.bigint "food_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["food_id"], name: "index_recipe_foods_on_food_id"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "name"
+    t.integer "prep_time"
+    t.integer "cooking_time"
+    t.text "description"
+    t.boolean "public"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "recipe_foods_id", null: false
+    t.index ["recipe_foods_id"], name: "index_recipes_on_recipe_foods_id"
+    t.index ["user_id"], name: "index_recipes_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "foods", "users"
+  add_foreign_key "recipe_foods", "foods"
+  add_foreign_key "recipes", "recipe_foods", column: "recipe_foods_id"
+  add_foreign_key "recipes", "users"
 end
