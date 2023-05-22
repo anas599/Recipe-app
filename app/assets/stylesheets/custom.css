@@ -2,12 +2,18 @@ h1 {
   color: rgb(0, 0, 0);
 }
 
-td,
-th {
+/* td,
+th,tr {
   border: 1px solid black;
-}
+text-align: center;
+} */
 
 .icon-app {
   width: 2rem;
   margin-right: 0.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }

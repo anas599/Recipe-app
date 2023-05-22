@@ -1,5 +1,5 @@
 <%# <%= form_with(model: food) do |form| %> %>
-  <%= form_with(model: @food, url: new_food_path, local: true, class: "form") do |form| %>
+<%= form_with(model: @food, url: foods_path, local: true, class: "form") do |form| %>
 
   <% if food.errors.any? %>
     <div style="color: red">

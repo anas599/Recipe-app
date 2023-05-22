@@ -1,28 +1,33 @@
-<p style="color: green"><%= notice %></p>
+<section class="container">
+  <p style="color: green"><%= notice %></p>
+  <h1>Foods</h1>
+  <table class="table table-bordered">
+    <tr>
+      <th scope="col">Food</th>
+      <th>Measurement Unit</th>
+      <th>Unit Price</th>
+      <th>Quantity</th>
+      <th>Actions</th>
+    </tr>
+    <% @foods.each do |food| %>
+      <tr>
+        <td><%= link_to food.name, food %></td>
+        <td><%= food.measure_unit %></td>
+        <td><%= food.price %></td>
+        <td><%= food.quantity %></td>
+        <td><%= button_to "Destroy this food", food, method: :delete, class: "bi bi-trash3 btn btn-outline-danger btn-sm"
+ %></td>
+      </tr>
+    <% end %>
+  </table>
+  <i class="bi bi-plus-circle btn btn-primary  link-light 
 
-<h1>Foods</h1>
+ "><%= link_to "New food", new_food_path, class:" link-light p-1
 
-<div id="foods">
-  <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-      <%= link_to "Show this food", food %>
-    </p>
-  <% end %>
-</div>
-<table>
-  <tr>
-    <th>Food</th>
-    <th>Measurement Unit</th>
-    <th>Unit Price</th>
-    <th>Actions</th>
-  </tr>
-  <tr>
-    <td>Row 2, Column 1</td>
-    <td>Row 2, Column 2</td>
-    <td>Row 2, Column 3</td>
-    <td>Row 2, Column 4</td>
-  </tr>
-</table>
 
-<%= link_to "New food", new_food_path %>
+
+" %>
+</i>
+
+  
+</section>
