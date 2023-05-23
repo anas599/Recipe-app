@@ -20,24 +20,19 @@
       </p>
     </div>
 
-    <div>
+    <div class='d-flex'>
       <p>
-        <strong>Public:</strong>
+        <strong>Public&nbsp;</strong>
         <%= recipe.public %>
       </p>
 
     <%= form_with model: recipe, local: true, html: { id: "recipe-form" } do |f| %>
-      <div class="form-check">
-        <strong>
-          <%= f.label :public, class: "form-check-label" do %>
-            Public
-          <% end %>
-        </strong>
+      <div class="form-check form-switch">
         <%= f.check_box :public, class: "form-check-input", onchange: "this.form.submit();" %>
       </div>
       <%= f.submit "", class: "visually-hidden" %>
     <% end %>
-
+    
     </div>
   </div>
 </div>
