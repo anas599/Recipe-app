@@ -25,6 +25,19 @@
         <strong>Public:</strong>
         <%= recipe.public %>
       </p>
+
+    <%= form_with model: recipe, local: true, html: { id: "recipe-form" } do |f| %>
+      <div class="form-check">
+        <strong>
+          <%= f.label :public, class: "form-check-label" do %>
+            Public
+          <% end %>
+        </strong>
+        <%= f.check_box :public, class: "form-check-input", onchange: "this.form.submit();" %>
+      </div>
+      <%= f.submit "", class: "visually-hidden" %>
+    <% end %>
+
     </div>
   </div>
 </div>
