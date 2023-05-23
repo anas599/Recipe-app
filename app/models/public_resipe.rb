@@ -1,2 +1,0 @@
-class PublicResipe < ApplicationRecord
-end
