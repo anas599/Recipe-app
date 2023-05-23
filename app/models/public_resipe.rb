@@ -1,0 +1,2 @@
+class PublicResipe < ApplicationRecord
+end

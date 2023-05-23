@@ -1,28 +1,25 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Foods</h1>
-
-<div id="foods">
-  <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-      <%= link_to "Show this food", food %>
-    </p>
-  <% end %>
-</div>
-<table>
-  <tr>
-    <th>Food</th>
-    <th>Measurement Unit</th>
-    <th>Unit Price</th>
-    <th>Actions</th>
-  </tr>
-  <tr>
-    <td>Row 2, Column 1</td>
-    <td>Row 2, Column 2</td>
-    <td>Row 2, Column 3</td>
-    <td>Row 2, Column 4</td>
-  </tr>
-</table>
-
-<%= link_to "New food", new_food_path %>
+<section class="container">
+  <p style="color: green"><%= notice %></p>
+  <h1 class="mb-5">Foods for user: <%=current_user.name%></h1>
+  <table class="table table-striped table-hover">
+    <tr>
+      <th  class="text-center" scope="col">Food</th>
+      <th class="text-center">Measurement Unit</th>
+      <th class="text-center">Unit Price</th>
+      <th class="text-center">Quantity</th>
+      <th class="text-center">Actions</th>
+    </tr>
+    <% @foods.each do |food| %>
+      <tr>
+        <td class="text-center" ><%= link_to food.name, food %></td>
+        <td class="text-center"><%= food.measure_unit %></td>
+        <td class="text-center">$<%= food.price %></td>
+        <td class="text-center"><%= food.quantity %></td>
+        <td class="text-center"><%= button_to "Destroy this food", food, method: :delete, class: "bi bi-trash3 btn btn-outline-danger btn-sm" %></td>
+      </tr>
+    <% end %>
+  </table>
+  <i class="bi bi-plus-circle btn btn-primary link-light">
+    <%= link_to "New food", new_food_path, class:"link-light p-1" %>
+  </i>
+</section>

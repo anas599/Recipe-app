@@ -2,11 +2,6 @@ h1 {
   color: rgb(0, 0, 0);
 }
 
-td,
-th {
-  border: 1px solid black;
-}
-
 .icon-app {
   width: 2rem;
   margin-right: 0.5rem;
@@ -14,4 +9,8 @@ th {
 
 .border {
   border: 1px solid black; 
+  
+a {
+  color: black;
+  text-decoration: none;
 }
