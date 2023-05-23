@@ -15,7 +15,7 @@
         <td class="text-center"><%= food.measure_unit %></td>
         <td class="text-center">$<%= food.price %></td>
         <td class="text-center"><%= food.quantity %></td>
-        <td class="text-center"><%= button_to "Destroy this food", food, method: :delete, class: "bi bi-trash3 btn btn-outline-danger btn-sm" %></td>
+        <td class="text-center"><%= button_to "Delete this food", food, method: :delete, class: "bi bi-trash3 btn btn-outline-danger btn-sm" %></td>
       </tr>
     <% end %>
   </table>
