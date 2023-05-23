@@ -1,12 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Recipes</h1>
-
-<div id="recipes">
+<div id="recipes" class='border p-4 m-6'>
   <% @recipes.each do |recipe| %>
-    <%= render recipe %>
+
+    <div id="<%= dom_id recipe %>" class='d-flex justify-content-between'>
+  <p>
+    <strong><%= recipe.name %></strong>
+  </p>
+
+  <p>
+    Description for the recipe.<br>
+    <%= recipe.description %>
+  </p>
+</div>
+
     <p>
-      <%= link_to "Show this recipe", recipe %>
+      <%= link_to "REMOVE", recipe %>
     </p>
   <% end %>
 </div>
