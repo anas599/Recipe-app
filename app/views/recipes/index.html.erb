@@ -1,23 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
-<div id="recipes" class='border p-4 m-6'>
+  <h2 class="my-5">Recipes</h2>
   <% @recipes.each do |recipe| %>
+    <div id="recipes" class='shadow p-3 mb-5 bg-white rounded container'>
+      <div id="<%= dom_id recipe %>" class='d-flex justify-content-between'>
+        <p>
+          <strong><%= link_to recipe.name, recipe %></strong>
+        </p>
 
-    <div id="<%= dom_id recipe %>" class='d-flex justify-content-between'>
-  <p>
-    <strong><%= recipe.name %></strong>
-  </p>
+        <p>
+          Description for the recipe.<br>
+          <%= recipe.description %>
+        </p>
+      </div>
 
-  <p>
-    Description for the recipe.<br>
-    <%= recipe.description %>
-  </p>
-</div>
-
-    <p>
-      <%= link_to "REMOVE", recipe %>
-    </p>
+      <p>
+        <%= button_to " REMOVE", recipe, method: :delete, class: 'bi bi-trash3 btn btn-outline-danger btn-sm' %>
+      </p>
+    </div>
   <% end %>
-</div>
 
-<%= link_to "New recipe", new_recipe_path %>
+
+<%= link_to " New recipe", new_recipe_path, class: 'bi bi-plus-circle btn btn-primary link-light' %>
