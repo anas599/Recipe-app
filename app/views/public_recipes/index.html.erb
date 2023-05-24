@@ -1,22 +1,22 @@
 <section class="container">
   <h2 class="my-5">Public Recipes</h2>
-  <div class="shadow p-3 mb-5 bg-white rounded
-
-">
   <% @public_recipes.each do |x| %>
-    <% user = User.find(x.user_id) %>
-    <p><%= x.name %></p>
-    <p>By: <%= user.name %></p>
-    <% recipe_foods = RecipeFood.where(recipe_id: x.id) %>
-    <% item_count = recipe_foods.count %>
-    <p>Total Food Items: <%= item_count %></p>
-    <% total_price = 0 %>
-    <% recipe_foods.each do |recipe_food| %>
-      <% food = Food.find(recipe_food.food_id) %>
-      <% total_price += food.price * recipe_food.quantity %>
-    <% end %>
-    <p>Total Price: <%= total_price %>$</p>
-  <% end %>
-  </div>
+    <div class="shadow p-3 mb-5 bg-white rounded container">
+    <div class="row">
+      <% user = User.find(x.user_id) %>
+      <p class="col-6 text-center">By: <%= user.name %></p>
+      <% recipe_foods = RecipeFood.where(recipe_id: x.id) %>
+      <% total_price = 0 %>
+      <% recipe_foods.each do |recipe_food| %>
+        <% food = Food.find(recipe_food.food_id) %>
+        <% total_price += food.price * recipe_food.quantity %>
+      <% end %>
+      <p class="col-6 text-center">Total Price: <%= total_price %>$</p>
+      <p class="col-6 text-center"><%= x.name %></p>
+      <% item_count = recipe_foods.count %>
+      <p class="col-6 text-center">Total Food Items: <%= item_count %></p>
+    </div>
+    </div>
 
+  <% end %>
 </section>
