@@ -45,10 +45,16 @@ class RecipeFoodsController < ApplicationController
 
   def destroy
     @recipe_food.destroy
-
     respond_to do |format|
-      format.html { redirect_to recipe_foods_url, notice: 'Recipe food was successfully destroyed.' }
-      format.json { head :no_content }
+      if @recipe_food.destroy(recipe_food_params)
+        format.html do
+          redirect_to recipe_url(@recipe_food.recipe_id), notice: 'Recipe food was successfully destroyed.'
+        end
+        format.json { head :no_content }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @recipe_food.errors, status: :unprocessable_entity }
+      end
     end
   end
 
