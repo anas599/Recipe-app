@@ -53,8 +53,6 @@ class RecipesController < ApplicationController
     @recipe.recipe_foods.destroy_all
     @recipe.destroy
 
-
-
     respond_to do |format|
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
       format.json { head :no_content }
