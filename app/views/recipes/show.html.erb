@@ -1,10 +1,36 @@
 <p style="color: green"><%= notice %></p>
-
 <%= render @recipe %>
-
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<div class="my-3 d-flex ">
+  <%# <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> | %>
+  <%# <%= link_to "Back to recipes", recipes_path %> %>
+  <%= button_to "Destroy this recipe", @recipe, method: :delete, class:"bi  btn btn-outline-danger btn-sm mx-1" %>
+  <%= link_to "Add ingredient", new_recipe_food_path, class:"bi  btn btn-outline-primary btn-sm mx-1" %>
 </div>
+<section>
+  <% if @recipe_foods.present? %>
+    <table class="table table-striped table-hover table-bordered">
+      <tr>
+        <th class="text-center" scope="col">Food</th>
+        <th class="text-center">Measurement Unit</th>
+        <th class="text-center">Value</th>
+        <th class="text-center">Quantity</th>
+        <th class="text-center">Actions</th>
+      </tr>
+      <% @recipe_foods.each do |recipe_food| %>
+        <% recipe = Recipe.find(recipe_food.recipe_id) %>
+        <% food = Food.find(recipe_food.food_id) %>
+        <tr>
+          <td class="text-center"><%= recipe.name %></td>
+          <td class="text-center"><%= food.measure_unit %></td>
+          <td class="text-center">$<%= food.price * recipe_food.quantity %></td>
+          <td class="text-center"><%= recipe_food.quantity %></td>
+          <td class="text-center d-flex align-items-center justify-content-center
+"><%= button_to "Remove", @recipe_food, method: :delete, class:"bi  btn btn-outline-danger btn-sm mx-1" %>  <%= link_to "Modify", edit_recipe_food_path(@recipe), class:"bi  btn btn-outline-warning btn-sm mx-1"%>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <p>No recipe foods available.</p>
+  <% end %>
+</section>
