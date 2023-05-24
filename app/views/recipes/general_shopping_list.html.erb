@@ -4,33 +4,50 @@
   <% if @recipe_foods.present? %>
     <% total_price = 0 %>
     <% item_count = 0 %>
+    <% shopping_list = Hash.new(0) %>
+    
     <% @recipe_foods.each do |recipe_food| %>
       <% recipe = Recipe.find(recipe_food.recipe_id) %>
-      <%# <% recipe = Recipe.where(user_id = current_user.id) %> %>
       <% food = Food.find(recipe_food.food_id) %>
+      
+      <% shopping_list[food] += recipe_food.quantity %>
+      
       <% total_price += food.price * (recipe_food.quantity - food.quantity) %>
       <% item_count += 1 %>
-    <div class='d-flex justify-content-around'>
-      <p>Amount of food items to buy: <%= item_count %></p>
-      <p>Total value of food needed: &dollar; <%= total_price %></p>
-    </div>
+    <% end %>
+    
     <table class="table table-striped table-hover">
       <tr>
-        <th  class="text-center" scope="col">Food</th>
+        <th class="text-center" scope="col">Food</th>
         <th class="text-center">Quantity</th>
         <th class="text-center">Price</th>
       </tr>
+      
+       <% sum_of_prices = 0 %>
+      <% shopping_list.each do |food, quantity| %>
         <tr>
           <td class="text-center"><%= food.name %></td>
-          <td class="text-center"><%= (recipe_food.quantity - food.quantity) %>&nbsp;<%= food.measure_unit %></td>
-          <td class="text-center">$<%= food.price * (recipe_food.quantity - food.quantity) %></td>
+          <td class="text-center"><%= (quantity - food.quantity) %>&nbsp;<%= food.measure_unit %></td>
+          <% price = food.price * (quantity - food.quantity) %>
+          <td class="text-center">$<%= price %></td>
+           <% sum_of_prices += price %>
         </tr>
       <% end %>
+      <div class='d-flex justify-content-around'>
+        <p>Amount of food items to buy: <%= shopping_list.length %></p>
+        <p>Total value of food needed: &dollar; <%= sum_of_prices %></p>
+      </div>
     </table>
   <% else %>
     <p>No shopping list available.</p>
   <% end %>
 </section>
+
+
+
+
+
+
 
 
 <section class="container">
