@@ -2,6 +2,8 @@
 
 <%= render @recipe %>
 
+<%= link_to 'Generate Shopping List', general_shopping_list_path, class: 'btn btn-primary' %>
+
 <div>
   <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
   <%= link_to "Back to recipes", recipes_path %>

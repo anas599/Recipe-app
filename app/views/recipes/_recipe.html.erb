@@ -23,7 +23,6 @@
     <div class='d-flex'>
       <p>
         <strong>Public&nbsp;</strong>
-        <%= recipe.public %>
       </p>
 
     <%= form_with model: recipe, local: true, html: { id: "recipe-form" } do |f| %>
@@ -32,7 +31,7 @@
       </div>
       <%= f.submit "", class: "visually-hidden" %>
     <% end %>
-    
+
     </div>
   </div>
 </div>
