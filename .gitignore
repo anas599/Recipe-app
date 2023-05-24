@@ -25,15 +25,13 @@
 !/tmp/storage/
 !/tmp/storage/.keep
 
-/public/assets
+
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/config/database.yml
 
 
-/node_modules
-/tmp
-tmp/
+!/app/assets/builds/.keep
 # .gitignore
 node_modules/
+/node_modules
