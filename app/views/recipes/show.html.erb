@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 <%= render @recipe %>
 <div class="my-3 d-flex ">
-  <%# <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> 
+  <%# <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %>
   <%# <%= link_to "Back to recipes", recipes_path %>
   <%= button_to "Destroy this recipe", @recipe, method: :delete, class:"bi  btn btn-outline-danger btn-sm mx-1" %>
   <%= link_to "Add ingredient", new_recipe_food_path, class:"bi  btn btn-outline-primary btn-sm mx-1" %>
@@ -24,8 +24,11 @@
           <td class="text-center"><%= food.measure_unit %></td>
           <td class="text-center">$<%= food.price * recipe_food.quantity %></td>
           <td class="text-center"><%= recipe_food.quantity %></td>
-          <td class="text-center d-flex align-items-center justify-content-center
-"><%= button_to "Remove", @recipe_food, method: :delete, class:"bi  btn btn-outline-danger btn-sm mx-1" %>  <%= link_to "Modify", edit_recipe_food_path(recipe_food.id), class:"bi  btn btn-outline-warning btn-sm mx-1"%>
+          <td class="text-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <%= button_to "Remove", @recipe_food, method: :delete, class: "bi btn btn-outline-danger btn-sm mx-1" %>
+              <%= link_to "Modify", edit_recipe_food_path(recipe_food.id), class: "bi btn btn-outline-warning btn-sm mx-1" %>
+            </div>
           </td>
         </tr>
       <% end %>
