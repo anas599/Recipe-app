@@ -26,7 +26,7 @@
           <td class="text-center"><%= recipe_food.quantity %></td>
           <td class="text-center">
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-              <%= button_to "Remove", @recipe_food, method: :delete, class: "bi btn btn-outline-danger btn-sm mx-1" %>
+              <%= button_to "Remove", recipe_food, method: :delete, class: "bi btn btn-outline-danger btn-sm mx-1" %>
               <%= link_to "Modify", edit_recipe_food_path(recipe_food.id), class: "bi btn btn-outline-warning btn-sm mx-1" %>
             </div>
           </td>
