@@ -62,7 +62,7 @@ class RecipesController < ApplicationController
   def general_shopping_list
     @foods = Food.all
     @recipe_foods = RecipeFood.all
-  end  
+  end
 
   private
 
