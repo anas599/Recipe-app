@@ -1,10 +1,8 @@
 <p style="color: green"><%= notice %></p>
 <%= render @recipe %>
-<div class="my-3 d-flex ">
-  <%# <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %>
-  <%# <%= link_to "Back to recipes", recipes_path %>
-  <%= button_to "Destroy this recipe", @recipe, method: :delete, class:"bi  btn btn-outline-danger btn-sm mx-1" %>
-  <%= link_to "Add ingredient", new_recipe_food_path, class:"bi  btn btn-outline-primary btn-sm mx-1" %>
+<div class="my-3 d-flex">
+  <%= button_to "Destroy this recipe", @recipe, method: :delete, class: "bi btn btn-outline-danger btn-sm mx-1" %>
+  <%= link_to "Add ingredient", new_recipe_food_path(recipe_id: @recipe.id), class: "bi btn btn-outline-primary btn-sm mx-1" %>
 </div>
 <section>
   <% if @recipe_foods.present? %>
