@@ -1,10 +1,28 @@
 <h1>Editing recipe food</h1>
-
-<%= render "form", recipe_food: @recipe_food %>
-
-<br>
-
-<div>
-  <%= link_to "Show this recipe food", @recipe_food %> |
-  <%= link_to "Back to recipe foods", recipe_foods_path %>
-</div>
+<% @foods = Food.where(user_id: current_user.id) %>
+<%= form_with(model: @recipe_food) do |form| %>
+  <% if @recipe_food.errors.any? %>
+    <div class="text-danger">
+      <h2><%= pluralize(@recipe_food.errors.count, "error") %> prohibited this recipe_food from being saved:</h2>
+      <ul>
+        <% @recipe_food.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= form.label :quantity, class: "form-label" %>
+    <%= form.number_field :quantity, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.hidden_field :recipe_id %>
+  </div>
+  <div class="form-group my-3">
+    <%= form.label :food_id, class: "form-label" %>
+    <%= form.select :food_id, options_from_collection_for_select(@foods, :id, :name, params[:food_id]), { prompt: "Select Food" }, class: "form-select" %>
+  </div>
+  <div class="form-group">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
