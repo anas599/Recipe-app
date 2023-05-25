@@ -10,7 +10,9 @@ RSpec.describe Recipe, type: :model do
                   email: 'rails@railsmail.com',
                   password: '111111')
     end
-    let(:r1) { Recipe.new(name: 'Fried Rice', prep_time: 1, cooking_time: 2, description: 'This is a ...', user_id: u1.id) }
+    let(:r1) do
+      Recipe.new(name: 'Fried Rice', prep_time: 1, cooking_time: 2, description: 'This is a ...', user_id: u1.id)
+    end
 
     it 'should have the correct name' do
       expect(r1.name).to eq('Fried Rice')
@@ -36,7 +38,9 @@ RSpec.describe Recipe, type: :model do
                   email: 'rails2@railsmail.com',
                   password: '111111')
     end
-    let(:r1) { Recipe.new(name: 'Jollof Rice', prep_time: 2, cooking_time: 3, description: 'This is a new ...', user_id: u2.id) }
+    let(:r1) do
+      Recipe.new(name: 'Jollof Rice', prep_time: 2, cooking_time: 3, description: 'This is a new ...', user_id: u2.id)
+    end
     it 'should have name of food' do
       expect(r1.name).to eq('Jollof Rice')
     end
