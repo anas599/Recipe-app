@@ -10,7 +10,7 @@ RSpec.describe Food, type: :model do
                   email: 'rails@railsmail.com',
                   password: '111111')
     end
-    let(:f1) { Food.new(name: 'Burger', measure_unit: 'Gram', price: 2, quantity: 2, user_id: u1.id) }
+    let(:f1) { Food.new(name: 'Burger', measure_unit: 'gram(s)', price: 2, quantity: 2, user_id: u1.id) }
     let(:r1) do
       Recipe.create(id: 12,
                     name: 'BBQ Burger',
