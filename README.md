@@ -1,7 +1,9 @@
-<a name="readme-top"></a>
+<h2>Recipe-App</h2>
+<img src="app/assets/images/cook-book.png" alt="Icon" width="100px" height="100px" />
+<br>
+<br>
 
 # 📗 Table of Contents
-
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
@@ -10,6 +12,9 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -17,60 +22,106 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [RECIPE APP] <a name="about-project"></a>
-
-**[Recipe App]** is a robust and user-friendly recipe application built using Ruby on Rails, leveraging the power of Bootstrap, Devise, and Capybara gems. Seamlessly create, discover, and share recipes with it. It offers a delightful cooking experience with its intuitive interface and extensive features.
-
+# 📖 Recipe-App <a name="about-project"></a>
+Recipe App is a robust and user-friendly recipe application built using Ruby on Rails, leveraging the power of Bootstrap, Devise, and Capybara gems. Seamlessly create, discover, and share recipes with it. It offers a delightful cooking experience with its intuitive interface and extensive features.
+**Recipe-App** 
 ## 🛠 Built With <a name="built-with"></a>
-
+PostgresSQL
+Ruby on rails
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-<summary>Recipe App built with Ruby on Rails</summary>
   <ul>
-    <li><a href="https://www.ruby-lang.org/en/">PostgreSQL</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on rails</a></li>
+    <li><a href="https://www.postgresql.org/">PSQL</a></li>
+  </ul>
+</details>
+<br>
+
+### Key Features <a name="key-features"></a>
+<details>
+  <ul>
+    <li>Add Foods with its value and measure unit</li>
+    <li>Add Recipes with its cooking time and prep time</li>
+    <li>If recipe is made public by that user than it shows under public recipes page</li>
   </ul>
 </details>
 
-### Key Features <a name="key-features"></a>
-
-- **Built with Ruby on Rails**
-- **Connected to Postgresql**
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+## 💻 Getting Started <a name="getting-started"></a>
+<br>
 
 ### Prerequisites
+<details>
+<p>In order to run this project you need:</p>
+  <ul>
+    <li>Ruby installed</li>
+    <li>Add Recipes with its cooking time and prep time</li>
+    <li>rbenv installed</li>
+  </ul>
+</details>
+<br>
 
-In order to run this project you need:
-
-- to install Ruby
-- to install rails
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-- `git clone https://github.com/anas599/Recipe-app`
-- `cd Recipe-app`
-- `code .` <!-- If you are using VS Code -->
+    git clone https://github.com/anas599/Recipe-app.git
+  cd Recipe-App
+  
 
-Open your terminal:
+  <br>
+  
 
-Run:
-`bundle install`
-`rails s`
+### Install
 
-After the server starts running, go to your browser and visit the following link:
 
-`http://localhost:3000/`
+<details>
+<p>Install this project with:</p>
+  <ul>
+    <li>  cd Recipe-app</li>
+    <li>  run rails server</li>
+  </ul>
+</details>
+<br>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Authors <a name="authors"></a>
+### Usage
+<details>
+<p>To run the project, execute the following command:</p>
+  <ul>
+    <li>  cd Recipe-app</li>
+    <li>  run rails server</li>
+  </ul>
+</details>
+<br>
+
+
+
+### Run tests
+<details>
+<p>To run tests, run the following command:</p>
+  <ul>
+    <li>rspec</li>
+  </ul>
+</details>
+<br>
+
+
+### Deployment
+<details>
+<p>You can deploy this project using:</p>
+  <ul>
+    <li>Heroku</li>
+  </ul>
+</details>
+<br>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>👥 Authors <a name="authors"></a>
 
 👤 **ANAS ALSAMMARRAIE**
 
@@ -84,34 +135,42 @@ After the server starts running, go to your browser and visit the following link
 - Twitter: [@UthmanDeRoyale](https://twitter.com/UthmanDeRoyale)
 - LinkedIn: [Uthman Igein Bello-Imoukhuede](https://www.linkedin.com/in/uthmanbelloimoukhuede)
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 🔭 Future Features <a name="future-features"></a>
+<details>
+  <ul>
+    <li>Add videos for new data</li>
+    <li>Add images of food</li>
+    <li>Update  style</li>
+  </ul>
+</details>
+<br>
 
-- [Add more UI]
-- [Include more styling]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/anas599/Recipe-app/issues).
+Feel free to check the [issues page](https://github.com/anas599/Recipe-app.git/issues/).
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project please show us support by giving it a star.
+> If you like the project Please do not hesitate if you have any questions
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank our colleagues at Microverse for their support during the project.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+> I would like to thank Microverse for this project based learning
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
