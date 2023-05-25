@@ -30,66 +30,96 @@ PostgresSQL
 Ruby on rails
 ### Tech Stack <a name="tech-stack"></a>
 
-> Ruby on rails
-
-
 <details>
-<summary>Ruby</summary>
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on rails</a></li>
+    <li><a href="https://www.postgresql.org/">PSQL</a></li>
   </ul>
 </details>
+<br>
 
 ### Key Features <a name="key-features"></a>
--Add Foods with its value and measure unit
--Add Recipes with its cooking time and prep time
--If recipe is made public by that user than it shows under public recipes page
+<details>
+  <ul>
+    <li>Add Foods with its value and measure unit</li>
+    <li>Add Recipes with its cooking time and prep time</li>
+    <li>If recipe is made public by that user than it shows under public recipes page</li>
+  </ul>
+</details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-- Recipe app
+<br>
 
 ### Prerequisites
-
-In order to run this project you need:
-
-Ruby installed
-  run Ruby main.rb
+<details>
+<p>In order to run this project you need:</p>
+  <ul>
+    <li>Ruby installed</li>
+    <li>Add Recipes with its cooking time and prep time</li>
+    <li>rbenv installed</li>
+  </ul>
+</details>
+<br>
 
 
 ### Setup
 
 Clone this repository to your desired folder:
-  cd Recipe-App
 
     git clone https://github.com/anas599/Recipe-app.git
+  cd Recipe-App
+  
+
+  <br>
   
 
 ### Install
 
-Install this project with:
 
-  cd Recipe-app
-  run rails server
+<details>
+<p>Install this project with:</p>
+  <ul>
+    <li>  cd Recipe-app</li>
+    <li>  run rails server</li>
+  </ul>
+</details>
+<br>
 
 
 ### Usage
+<details>
+<p>To run the project, execute the following command:</p>
+  <ul>
+    <li>  cd Recipe-app</li>
+    <li>  run rails server</li>
+  </ul>
+</details>
+<br>
 
-To run the project, execute the following command:
-rails server
 
 
 ### Run tests
+<details>
+<p>To run tests, run the following command:</p>
+  <ul>
+    <li>rspec</li>
+  </ul>
+</details>
+<br>
 
-To run tests, run the following command:
 
-rspec
 ### Deployment
-
-You can deploy this project using:
+<details>
+<p>You can deploy this project using:</p>
+  <ul>
+    <li>Heroku</li>
+  </ul>
+</details>
+<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>👥 Authors <a name="authors"></a>
 
@@ -104,9 +134,15 @@ You can deploy this project using:
 
 
 ## 🔭 Future Features <a name="future-features"></a>
-- Add videos for new data
-- Add images of food
-- Update  style
+<details>
+  <ul>
+    <li>Add videos for new data</li>
+    <li>Add images of food</li>
+    <li>Update  style</li>
+  </ul>
+</details>
+<br>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
