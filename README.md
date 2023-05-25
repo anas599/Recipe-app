@@ -129,6 +129,12 @@ Clone this repository to your desired folder:
 - Twitter: [@anas599](https://twitter.com/anas599)
 - LinkedIn: [anas1993](https://linkedin.com/in/anas1993)
 
+👤 **Uthman Igein Bello-Imoukhuede**
+
+- GitHub: [Uthmanbello](https://github.com/Uthmanbello)
+- Twitter: [@UthmanDeRoyale](https://twitter.com/UthmanDeRoyale)
+- LinkedIn: [Uthman Igein Bello-Imoukhuede](https://www.linkedin.com/in/uthmanbelloimoukhuede)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,7 +157,7 @@ Clone this repository to your desired folder:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/anas599/Recipe-app.git/issues/).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -170,6 +176,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/anas599/Recipe-app/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
