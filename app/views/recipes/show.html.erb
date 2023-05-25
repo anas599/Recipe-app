@@ -2,11 +2,22 @@
 <%= render @recipe %>
 
 <div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: 'bi  btn btn-outline-primary btn-sm mx-1' %>
+  <% if can? :edit, @recipe %>
+    <p>
+      <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: 'bi  btn btn-outline-primary btn-sm mx-1' %>
+      <%= link_to "New food", new_food_path, class: 'bi  btn btn-outline-primary btn-sm mx-1' %>
+    </p>
+  <% end %>
+
   <div class="my-3 d-flex ">
     <%= link_to 'Generate Shopping List', general_shopping_list_path, class: 'bi  btn btn-outline-primary btn-sm mx-1' %>
-    <%= button_to "Delete this recipe", @recipe, method: :delete, class: "bi btn btn-outline-danger btn-sm mx-1" %>
-  <%= link_to "Add ingredient", new_recipe_food_path(recipe_id: @recipe.id), class: "bi btn btn-outline-primary btn-sm mx-1" %>
+    <% if can? :destroy, @recipe %>
+      <p>
+        <%= button_to "Delete this recipe", @recipe, method: :delete, class: "bi btn btn-outline-danger btn-sm mx-1" %>
+      </p>
+    <% end %>
+    
+    <%= link_to "Add ingredient", new_recipe_food_path(recipe_id: @recipe.id), class: "bi btn btn-outline-primary btn-sm mx-1" %>
   </div>
 </div>
 <section>

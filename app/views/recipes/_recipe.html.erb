@@ -21,17 +21,19 @@
     </div>
 
     <div class='d-flex'>
-      <p>
-        <strong>Public&nbsp;</strong>
-      </p>
+      <% if can? :edit, @recipe %>
+        <p>
+          <strong>Public&nbsp;</strong>
+        </p>
 
-    <%= form_with model: recipe, local: true, html: { id: "recipe-form" } do |f| %>
-      <div class="form-check form-switch">
-        <%= f.check_box :public, class: "form-check-input", onchange: "this.form.submit();" %>
-      </div>
-      <%= f.submit "", class: "visually-hidden" %>
-    <% end %>
-
+        <%= form_with model: recipe, local: true, html: { id: "recipe-form" } do |f| %>
+          <div class="form-check form-switch">
+            <%= f.check_box :public, class: "form-check-input", onchange: "this.form.submit();" %>
+          </div>
+          <%= f.submit "", class: "visually-hidden" %>
+        <% end %>
+      <% end %>
+      
     </div>
   </div>
 </div>
