@@ -4,7 +4,7 @@
     <div class="shadow p-3 mb-5 bg-white rounded container">
       <div class="row">
         <% user = User.find(x.user_id) %>
-        <h4 class="col-6 text-center"><%= x.name %></h4>
+        <h4 class="col-6 text-center"><%= link_to x.name, x %></h4>
         <% recipe_foods = RecipeFood.where(recipe_id: x.id) %>
         <% total_price = 0 %>
         <% recipe_foods.each do |recipe_food| %>
