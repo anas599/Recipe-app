@@ -1,4 +1,3 @@
-<p style="color: green"><%= notice %></p>
 
   <h2 class="my-5">Recipes</h2>
   <% @recipes.each do |recipe| %>
@@ -13,10 +12,10 @@
           <%= recipe.description %>
         </p>
       </div>
-
       <p>
         <%= button_to " REMOVE", recipe, method: :delete, class: 'bi bi-trash3 btn btn-outline-danger btn-sm' %>
       </p>
+      
     </div>
   <% end %>
 
