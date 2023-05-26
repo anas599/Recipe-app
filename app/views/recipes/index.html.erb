@@ -1,7 +1,7 @@
 
   <h2 class="my-5">Recipes</h2>
   <% @recipes.each do |recipe| %>
-    <div id="recipes" class='shadow p-3 mb-5 bg-white rounded container'>
+    <div id="recipes" class='shadow p-3 mb-5 glass-bg rounded container'>
       <div id="<%= dom_id recipe %>" class='d-flex justify-content-between'>
         <p>
           <strong><%= link_to recipe.name, recipe %></strong>
