@@ -20,7 +20,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/public_recipes/">Public Recipes</a>
         </li>
-        <li class="nav-item dropdown m-0">
+        <%# <li class="nav-item dropdown m-0">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
@@ -30,7 +30,7 @@
             <li><hr class=" m-0 dropdown-divider"></li>
             <li><a class=" m-0 dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
+        </li> %>
         <% if user_signed_in? %>
           <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn btn-outline-danger"%></li>
         <% else %>
