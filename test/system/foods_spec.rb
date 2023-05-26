@@ -8,9 +8,10 @@ RSpec.describe Food, type: :system do
                   created_at: '2023-05-22 16:34:29.347120000 +0000',
                   updated_at: '2023-05-22 16:34:29.347120000 +0000',
                   email: 'rails@railsmail.com',
-                  password: '111111')
+                  password: '111111',
+                  password_confirmation: '111111')
     end
-    let(:f1) { Food.new(name: 'Burger', measure_unit: 'Gram', price: 2, quantity: 2, user_id: u1.id) }
+    let(:f1) { Food.new(name: 'Burger', measure_unit: 'gram(s)', price: 2, quantity: 2, user_id: u1.id) }
     let(:r1) do
       Recipe.create(id: 1,
                     name: 'BBQ Burger',
@@ -45,7 +46,7 @@ RSpec.describe Food, type: :system do
       expect(page).to have_content('Burger')
       expect(page).to have_content('Price: 2')
       expect(page).to have_content('Quantity: 2')
-      expect(page).to have_content('Measure unit: Gram')
+      expect(page).to have_content('Measure unit: gram(s)')
     end
   end
 end

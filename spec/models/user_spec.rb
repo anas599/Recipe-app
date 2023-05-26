@@ -8,7 +8,8 @@ RSpec.describe User, type: :model do
                   created_at: '2023-05-22 16:34:29.347120000 +0000',
                   updated_at: '2023-05-22 16:34:29.347120000 +0000',
                   email: 'rails@railsmail.com',
-                  password: '111111')
+                  password: '111111',
+                  password_confirmation: '111111')
     end
 
     it 'should have the correct name' do

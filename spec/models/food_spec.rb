@@ -8,10 +8,14 @@ RSpec.describe Food, type: :model do
                   created_at: '2023-05-22 16:34:29.347120000 +0000',
                   updated_at: '2023-05-22 16:34:29.347120000 +0000',
                   email: 'rails@railsmail.com',
-                  password: '111111')
+                  password: '111111',
+                  password_confirmation: '111111')
     end
-    let(:f1) { Food.new(name: 'Burger', measure_unit: 'Gram', price: 2, quantity: 2, user_id: u1.id) }
-
+    let(:f1) { Food.create(name: 'Burger', measure_unit: 'gram(s)', price: 2, quantity: 2, user_id: u1.id) }
+    before(:each) do
+      u1.save
+      f1.save
+    end
     it 'should have the correct name' do
       expect(f1.name).to eq('Burger')
     end
@@ -20,7 +24,7 @@ RSpec.describe Food, type: :model do
     end
 
     it 'should have the correct measure unit' do
-      expect(f1.measure_unit).to eq('Gram')
+      expect(f1.measure_unit).to eq('gram(s)')
     end
 
     it 'should have the correct price' do
@@ -45,14 +49,15 @@ RSpec.describe Food, type: :model do
                   created_at: '2023-05-22 16:34:29.347120000 +0000',
                   updated_at: '2023-05-22 16:34:29.347120000 +0000',
                   email: 'rails2@railsmail.com',
-                  password: '111111')
+                  password: '111111',
+                  password_confirmation: '111111')
     end
-    let(:f1) { Food.new(name: 'Burger', measure_unit: 'Gram', price: 2, quantity: 2, user_id: u2.id) }
+    let(:f1) { Food.new(name: 'Burger', measure_unit: 'gram(s)', price: 2, quantity: 2, user_id: u2.id) }
     it 'should have name of food' do
       expect(f1.name).to eq('Burger')
     end
     it 'should have measute unit of food' do
-      expect(f1.measure_unit).to eq('Gram')
+      expect(f1.measure_unit).to eq('gram(s)')
     end
     it 'should have price of food' do
       expect(f1.price).to eq(2)
