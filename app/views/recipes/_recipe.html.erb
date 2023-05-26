@@ -1,0 +1,39 @@
+<div id="<%= dom_id recipe %>">
+  <p>
+    <h1 class='text-center'><%= recipe.name %></h1>
+  </p>
+  <div class='d-flex justify-content-between'>
+    <div>
+      <p>
+        <strong>Preparation time:</strong>
+        <%= recipe.prep_time %> hour(s)
+      </p>
+
+      <p>
+        <strong>Cooking time:</strong>
+        <%= recipe.cooking_time %> hour(s)
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= recipe.description %>
+      </p>
+    </div>
+
+    <div class='d-flex'>
+      <% if can? :edit, @recipe %>
+        <p>
+          <strong>Public&nbsp;</strong>
+        </p>
+
+        <%= form_with model: recipe, local: true, html: { id: "recipe-form" } do |f| %>
+          <div class="form-check form-switch">
+            <%= f.check_box :public, class: "form-check-input", onchange: "this.form.submit();" %>
+          </div>
+          <%= f.submit "", class: "visually-hidden" %>
+        <% end %>
+      <% end %>
+      
+    </div>
+  </div>
+</div>
