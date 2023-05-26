@@ -1,5 +1,8 @@
 h1 {
-  color: #f1f1f1
+  background: #cfe7fa;
+  background: linear-gradient(to right, #cfe7fa 0%, #6393c1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .icon-app {
@@ -15,6 +18,7 @@ a {
   color: black;
   text-decoration: none;
 }
+
 body {
   position: relative;
 }
@@ -27,16 +31,15 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: url('/assets/black-kitchen-stone-.webp');
-
   filter: blur(7px);
   z-index: -1;
 }
-.glass-bg{
-    background: rgba(255, 255, 255, 0.37);
-    /* border-radius: 16px; */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.7px);
-    -webkit-backdrop-filter: blur(7.7px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #f1f1f1;
+
+.glass-bg {
+  background: rgba(255, 255, 255, 0.37);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #f1f1f1;
 }

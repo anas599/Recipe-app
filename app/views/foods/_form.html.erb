@@ -1,3 +1,4 @@
+<section class="text-white">
 <%= form_with(model: @food, url: foods_path, local: true, class: "form") do |form| %>
   <% if food.errors.any? %>
     <div style="color: red">
@@ -32,3 +33,4 @@
     <%= form.submit class: "btn btn-primary my-3" %>
   </div>
 <% end %>
+</section>

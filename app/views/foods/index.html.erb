@@ -1,24 +1,24 @@
 <section class="container">
-    <h1 class="mb-5">Foods for user: <%=current_user.name%></h1>
+  <h1 class="mb-5 ">Foods for user: <%=current_user.name%></h1>
   <table class="table  table-hover glass-bg  table-bordered shadow ">
     <tr>
-      <th  class="text-center shadow" scope="col">Food</th>
+      <th  class="text-center shadow link-info" scope="col">Food</th>
       <th class="text-center shadow">Measurement Unit</th>
-      <th class="text-center shadow">Unit Price</th>
+      <th class="text-center shadow ">Unit Price</th>
       <th class="text-center shadow">Quantity</th>
-      <th class="text-center shadow">Actions</th>
+      <th class="text-center shadow text-danger">Actions</th>
     </tr>
     <% @foods.each do |food| %>
       <tr>
-        <td class="text-center shadow" ><%= link_to food.name, food, class:"shadow" %></td>
+        <td class="text-center shadow " ><%= link_to food.name, food, class:" link-info" %></td>
         <td class="text-center shadow"><%= food.measure_unit %></td>
-        <td class="text-center shadow">$<%= food.price %></td>
+        <td class="text-center shadow ">$<%= food.price %></td>
         <td class="text-center shadow"><%= food.quantity %></td>
-        <td class="text-center shadow"><%= button_to "Delete this food", food, method: :delete, class: "bi bi-trash3 btn btn-outline-danger btn-sm shadow" %></td>
+        <td class="text-center shadow"><%= button_to "Remove", food, method: :delete, class: "bi bi-trash3 btn btn-danger  btn-sm shadow bg-gradient" %></td>
       </tr>
     <% end %>
   </table>
-  <i class="bi bi-plus-circle btn btn-primary link-light">
+  <i class="bi bi-plus-circle btn btn-primary bg-gradient link-light">
     <%= link_to "New food", new_food_path, class:"link-light p-1" %>
   </i>
 </section>

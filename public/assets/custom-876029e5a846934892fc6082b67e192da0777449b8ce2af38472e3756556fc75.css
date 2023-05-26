@@ -1,7 +1,9 @@
 h1 {
-  color: #f1f1f1
+background: #CFE7fA;
+  background: linear-gradient(to right, #CFE7fA 0%, #6393C1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
 .icon-app {
   width: 2rem;
   margin-right: 0.5rem;
@@ -33,7 +35,7 @@ body::before {
 }
 .glass-bg{
     background: rgba(255, 255, 255, 0.37);
-    /* border-radius: 16px; */
+
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.7px);
     -webkit-backdrop-filter: blur(7.7px);

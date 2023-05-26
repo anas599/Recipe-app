@@ -1,10 +1,10 @@
 <section class="container">
-  <h2 class="my-5">Public Recipes</h2>
+  <h2 class="my-5 text-white">Public Recipes</h2>
   <% @public_recipes.each do |x| %>
-    <div class="shadow p-3 mb-5 bg-white rounded container">
+    <div class="shadow p-3 mb-5  rounded container glass-bg">
       <div class="row">
         <% user = User.find(x.user_id) %>
-        <h4 class="col-6 text-center"><%= link_to x.name, x %></h4>
+        <h4 class="col-6 text-center"><%= link_to x.name, x,class:"text-white" %></h4>
         <% recipe_foods = RecipeFood.where(recipe_id: x.id) %>
         <% total_price = 0 %>
         <% recipe_foods.each do |recipe_food| %>

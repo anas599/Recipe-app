@@ -1,9 +1,9 @@
-
 <%= render @food %>
-
 <div>
-  <%= link_to "Edit this food", edit_food_path(@food) %> |
-  <%= link_to "Back to foods", foods_path %>
-
-  <%= button_to "Delete this food", @food, method: :delete %>
+  <%= link_to "Edit this food" ,edit_food_path(@food),class:"bi bi-pencil-square
+ btn btn-warning  btn-sm shadow bg-gradient my-3"
+ %>
+  <%= button_to "Delete food", @food,class:"bi bi-trash3 btn btn-danger  btn-sm shadow bg-gradient",method: :delete %>
+  <%= link_to "Back to foods", foods_path, class:"bi bi-arrow-left-circle-fill
+ text-white btn btn-primary bg-gradient link-light btn-sm my-3" %>
 </div>
