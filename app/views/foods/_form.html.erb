@@ -28,6 +28,8 @@
   </div>
   <div>
     <%= form.hidden_field :user_id, value: current_user.id %>
+      <%= form.hidden_field :id %>
+
   </div>
   <div>
     <%= form.submit class: "btn btn-primary my-3" %>

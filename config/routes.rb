@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users
   resources :public_recipes, only: [:index]
   root "foods#index"
+patch '/foods', to: 'foods#update'
 
   get '/general_shopping_list', to: 'recipes#general_shopping_list'
 
