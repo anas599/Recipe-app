@@ -1,23 +1,19 @@
-
-  <h2 class="my-5">Recipes</h2>
-  <% @recipes.each do |recipe| %>
-    <div id="recipes" class='shadow p-3 mb-5 bg-white rounded container'>
-      <div id="<%= dom_id recipe %>" class='d-flex justify-content-between'>
-        <p>
-          <strong><%= link_to recipe.name, recipe %></strong>
-        </p>
-
-        <p>
-          Description for the recipe.<br>
-          <%= recipe.description %>
-        </p>
-      </div>
-      <p>
-        <%= button_to " REMOVE", recipe, method: :delete, class: 'bi bi-trash3 btn btn-outline-danger btn-sm' %>
+<h2 class="my-5 text-white">Recipes</h2>
+<% @recipes.each do |recipe| %>
+  <div id="recipes" class='shadow p-3 mb-5 glass-bg rounded container'>
+    <div id="<%= dom_id recipe %>" class='d-flex justify-content-between'>
+      <p class="text-white">
+        <strong><%= link_to recipe.name, recipe, class:"text-white" %></strong>
       </p>
-      
+      <p>
+        Description for the recipe.<br>
+        <%= recipe.description %>
+      </p>
     </div>
-  <% end %>
-
-
-<%= link_to " New recipe", new_recipe_path, class: 'bi bi-plus-circle btn btn-primary link-light' %>
+    <p>
+      <%= button_to " REMOVE", recipe, method: :delete, class: 'bi bi-trash3 btn btn-danger  btn-sm shadow bg-gradient' %>
+    </p>
+  </div>
+<% end %>
+<%= link_to " New recipe", new_recipe_path, class: 'bi bi-plus-circle btn btn-primary bg-gradient link-light
+' %>
