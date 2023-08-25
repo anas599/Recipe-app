@@ -10,6 +10,7 @@ RSpec.describe Food, type: :model do
                   email: 'rails@railsmail.com',
                   password: '111111',
                   password_confirmation: '111111')
+                  # add user here
     end
     let(:f1) { Food.create(name: 'Burger', measure_unit: 'gram(s)', price: 2, quantity: 2, user_id: u1.id) }
     before(:each) do
